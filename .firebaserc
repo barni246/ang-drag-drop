@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kanbanfirebarni": {
+      "hosting": {
+        "angular-dragdrop": [
+          "kanbanfirebarni"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kanbanfirebarni"
+  }
+}
