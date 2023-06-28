@@ -36,6 +36,7 @@ export class AppComponent {
   tasks$: Observable<any>;
   firestore: Firestore = inject(Firestore);
   taskTitle = '';
+  barni:any;
 
   constructor() {
     const itemCollection = collection(this.firestore, 'tasks');
@@ -71,7 +72,8 @@ export class AppComponent {
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
-      console.log(event.currentIndex);
+      console.log(event.item.element.nativeElement);
+      console.log(event.container.element);
 
     } else {
       transferArrayItem(
